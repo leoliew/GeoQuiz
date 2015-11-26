@@ -1,2 +1,2 @@
 # GeoQuiz
-android geo sample 
+android geo question sample 
