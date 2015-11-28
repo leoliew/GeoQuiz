@@ -25,6 +25,7 @@ public class CheatActivity extends Activity {
 
 
     private void setAnswerShownResult(boolean isAnswerShown){
+        //send message to activity
         Intent data = new Intent();
         data.putExtra(EXTRA_ANSWER_SHOWN,isAnswerShown);
         setResult(RESULT_OK,data);
