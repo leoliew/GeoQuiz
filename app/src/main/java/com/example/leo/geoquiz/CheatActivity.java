@@ -2,10 +2,13 @@ package com.example.leo.geoquiz;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by leo on 15-11-27.
@@ -16,6 +19,10 @@ public class CheatActivity extends Activity {
     private boolean mAnswerIsTrue;
     private TextView mAnswerTextView;
     private Button mShowAnswer;
+    private TextView androidLevelText;
+
+
+
 
     private void setAnswerShownResult(boolean isAnswerShown){
         Intent data = new Intent();
@@ -47,6 +54,8 @@ public class CheatActivity extends Activity {
                 setAnswerShownResult(true);
             }
         });
+        androidLevelText = (TextView)findViewById(R.id.android_level);
+        androidLevelText.setText(getString(R.string.android_level_api)+" " +Build.VERSION.SDK_INT);
     }
 
 

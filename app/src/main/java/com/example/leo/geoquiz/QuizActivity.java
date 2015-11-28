@@ -1,6 +1,9 @@
 package com.example.leo.geoquiz;
 
+import android.annotation.TargetApi;
+import android.app.ActionBar;
 import android.content.Intent;
+import android.os.Build;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -34,6 +37,7 @@ public class QuizActivity extends AppCompatActivity {
     private int mCurrentIndex = 0;
     private boolean mIsCheater;
 
+    @TargetApi(11)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if(savedInstanceState != null){
